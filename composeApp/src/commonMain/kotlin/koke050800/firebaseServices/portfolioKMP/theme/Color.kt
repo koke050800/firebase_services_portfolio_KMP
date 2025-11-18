@@ -1,4 +1,4 @@
-package com.example.firebase_services_portfolio_kmp.theme
+package koke050800.firebaseServices.portfolioKMP.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF8F4C38)

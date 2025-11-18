@@ -1,4 +1,4 @@
-package com.example.firebase_services_portfolio_kmp
+package koke050800.firebaseServices.portfolioKMP
 
 class Greeting {
     private val platform = getPlatform()

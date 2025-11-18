@@ -1,4 +1,4 @@
-package com.example.firebase_services_portfolio_kmp.theme
+package koke050800.firebaseServices.portfolioKMP.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

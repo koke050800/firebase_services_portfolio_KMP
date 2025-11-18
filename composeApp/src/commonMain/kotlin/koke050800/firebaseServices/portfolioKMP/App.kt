@@ -1,4 +1,4 @@
-package com.example.firebase_services_portfolio_kmp
+package koke050800.firebaseServices.portfolioKMP
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
@@ -13,7 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.firebase_services_portfolio_kmp.theme.AppTheme
+import com.firebaseServices.portfolioKMP.theme.AppTheme
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
