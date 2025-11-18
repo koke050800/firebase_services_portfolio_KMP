@@ -1,0 +1,11 @@
+package com.koke050800.firebase_portfolio_kmp
+
+import NavigationRoot
+import androidx.compose.runtime.*
+import com.koke050800.firebase_portfolio_kmp.core.theme.AppTheme
+import org.jetbrains.compose.ui.tooling.preview.Preview
+
+
+@Composable
+@Preview
+fun App() = AppTheme {NavigationRoot()}

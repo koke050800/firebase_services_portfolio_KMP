@@ -1,4 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -60,7 +59,7 @@ kotlin {
 }
 
 android {
-    namespace = "koke050800.firebaseservices.portfoliokmp"
+    namespace = "com.firebaseservices.portfoliokmp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {

@@ -1,6 +1,6 @@
 TEAM_ID=
 
-PRODUCT_NAME=FirebaseServicesKMP
+PRODUCT_NAME=Firebase Portfolio KMP
 PRODUCT_BUNDLE_IDENTIFIER=koke050800.firebaseservices.portfoliokmp$(TEAM_ID)
 
 CURRENT_PROJECT_VERSION=1
