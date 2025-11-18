@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.firebase_services_portfolio_kmp.theme.AppTheme
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
@@ -22,7 +23,7 @@ import firebase_services_portfolio_kmp.composeapp.generated.resources.compose_mu
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    AppTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
             modifier = Modifier
@@ -31,6 +32,7 @@ fun App() {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+            Text(text = "Whereas recognition of the inherent dignity", style = MaterialTheme.typography.headlineLarge)
             Button(onClick = { showContent = !showContent }) {
                 Text("Click me!")
             }
