@@ -1,4 +1,4 @@
-package koke050800.firebaseServices.portfolioKMP.theme
+package koke050800.firebaseServices.portfolioKMP.core.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
