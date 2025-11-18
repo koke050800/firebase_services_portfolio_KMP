@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		F85B4847A51C58651B9A1662 /* Firebase_services_portfolio_KMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Firebase_services_portfolio_KMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F85B4847A51C58651B9A1662 /* FirebaseServicesKMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseServicesKMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -59,7 +59,7 @@
 		2542C48E7A498787961FC1BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F85B4847A51C58651B9A1662 /* Firebase_services_portfolio_KMP.app */,
+				F85B4847A51C58651B9A1662 /* FirebaseServicesKMP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = F85B4847A51C58651B9A1662 /* Firebase_services_portfolio_KMP.app */;
+			productReference = F85B4847A51C58651B9A1662 /* FirebaseServicesKMP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -312,7 +312,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.koke050800.firebase.services.portfolio;
+				PRODUCT_BUNDLE_IDENTIFIER = koke050800.firebaseservices.portfoliokmp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,7 +341,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.koke050800.firebase.services.portfolio;
+				PRODUCT_BUNDLE_IDENTIFIER = koke050800.firebaseservices.portfoliokmp;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
