@@ -4,14 +4,14 @@ import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import firebase_services_portfolio_kmp.composeapp.generated.resources.Res
-import firebase_services_portfolio_kmp.composeapp.generated.resources.jost
-import firebase_services_portfolio_kmp.composeapp.generated.resources.oswald_bold
-import firebase_services_portfolio_kmp.composeapp.generated.resources.oswald_extralight
-import firebase_services_portfolio_kmp.composeapp.generated.resources.oswald_light
-import firebase_services_portfolio_kmp.composeapp.generated.resources.oswald_medium
-import firebase_services_portfolio_kmp.composeapp.generated.resources.oswald_regular
-import firebase_services_portfolio_kmp.composeapp.generated.resources.oswald_semibold
+import firebase_portfolio_kmp.composeapp.generated.resources.Res
+import firebase_portfolio_kmp.composeapp.generated.resources.jost
+import firebase_portfolio_kmp.composeapp.generated.resources.oswald_bold
+import firebase_portfolio_kmp.composeapp.generated.resources.oswald_extralight
+import firebase_portfolio_kmp.composeapp.generated.resources.oswald_light
+import firebase_portfolio_kmp.composeapp.generated.resources.oswald_medium
+import firebase_portfolio_kmp.composeapp.generated.resources.oswald_regular
+import firebase_portfolio_kmp.composeapp.generated.resources.oswald_semibold
 import org.jetbrains.compose.resources.Font
 
 enum class AppFontFamily{
