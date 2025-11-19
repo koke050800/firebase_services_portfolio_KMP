@@ -59,7 +59,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.firebaseservices.portfoliokmp"
+    namespace = "koke050800.firebaseservices.portfoliokmp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
