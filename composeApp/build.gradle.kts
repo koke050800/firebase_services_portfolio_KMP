@@ -6,6 +6,8 @@ plugins {
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.serialization)
+    alias(libs.plugins.googleServices)
+    alias(libs.plugins.kotlinCocoapods)
 }
 
 kotlin {
@@ -14,14 +16,32 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
-    listOf(
-        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "ComposeApp"
-            isStatic = true
+
+    cocoapods {
+        summary = "Firebase Services Portfolio KMP"
+        version = "1.0"
+        homepage = "https://github.com/koke050800/firebase_services_portfolio_KMP"
+        ios.deploymentTarget = "16.0"
+
+        // Always verify this route
+        podfile = project.file("../iosApp/Podfile")
+
+        pod("FirebaseCore") {
+            extraOpts += listOf("-compiler-option", "-fmodules")
+        }
+//        pod("FirebaseAuth") {
+//            version = "~> 11.13"
+//            extraOpts += listOf("-compiler-option", "-fmodules")
+//        }
+
+        listOf(
+            iosArm64(),
+            iosSimulatorArm64()
+        ).forEach { iosTarget ->
+            iosTarget.binaries.framework {
+                baseName = "ComposeApp"
+                isStatic = true
+            }
         }
     }
 
@@ -30,7 +50,14 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
 
+
+            // DI with Koin
             implementation(libs.bundles.koin.android)
+
+            // Firebase Services
+            implementation(project.dependencies.platform(libs.android.firebase.bom))
+            implementation(libs.android.firebase.analytics)
+
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -88,4 +115,8 @@ android {
 dependencies {
     debugImplementation(compose.uiTooling)
 }
+
+
+
+
 

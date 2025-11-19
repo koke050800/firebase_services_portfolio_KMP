@@ -6,12 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		405E9FAC7183B203D3BAF7D4 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06627A2E6FCD58F13556860C /* Pods_iosApp.framework */; };
+		C22A09072ECE464600C2E733 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C22A09052ECE464600C2E733 /* GoogleService-Info.plist */; };
+		C22A090B2ECE513300C2E733 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C22A090A2ECE513300C2E733 /* Podfile */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		F85B4847A51C58651B9A1662 /* FirebaseServicesKMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseServicesKMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		008F61BCC2A3E628484B4297 /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
+		06627A2E6FCD58F13556860C /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C22A09052ECE464600C2E733 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C22A090A2ECE513300C2E733 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		EFE383EEAA6D9EAA4D10B19D /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
+		F85B4847A51C58651B9A1662 /* Firebase Portfolio KMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Portfolio KMP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		00A41CC73BFEA5364803B78C /* Exceptions for "iosApp" folder in "iosApp" target */ = {
+		00A41CC73BFEA5364803B78C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -24,13 +35,15 @@
 		50AAB60FA3B6284C740C824B /* iosApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				00A41CC73BFEA5364803B78C /* Exceptions for "iosApp" folder in "iosApp" target */,
+				00A41CC73BFEA5364803B78C /* PBXFileSystemSynchronizedBuildFileExceptionSet */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
 		};
 		E081216BB61BFFAD218804D2 /* Configuration */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = Configuration;
 			sourceTree = "<group>";
 		};
@@ -41,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405E9FAC7183B203D3BAF7D4 /* Pods_iosApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,15 +67,44 @@
 				E081216BB61BFFAD218804D2 /* Configuration */,
 				50AAB60FA3B6284C740C824B /* iosApp */,
 				2542C48E7A498787961FC1BE /* Products */,
+				C22A09062ECE464600C2E733 /* Firebase */,
+				C22A090A2ECE513300C2E733 /* Podfile */,
+				F86E575B6D9E93AE3213F00F /* Pods */,
+				F3D8CA37D04F033914FC49DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		2542C48E7A498787961FC1BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F85B4847A51C58651B9A1662 /* FirebaseServicesKMP.app */,
+				F85B4847A51C58651B9A1662 /* Firebase Portfolio KMP.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C22A09062ECE464600C2E733 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				C22A09052ECE464600C2E733 /* GoogleService-Info.plist */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		F3D8CA37D04F033914FC49DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06627A2E6FCD58F13556860C /* Pods_iosApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F86E575B6D9E93AE3213F00F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				008F61BCC2A3E628484B4297 /* Pods-iosApp.debug.xcconfig */,
+				EFE383EEAA6D9EAA4D10B19D /* Pods-iosApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,10 +114,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3203D332320E0D58B290422E /* Build configuration list for PBXNativeTarget "iosApp" */;
 			buildPhases = (
+				2BBD620BC0C09E3A4DC253E5 /* [CP] Check Pods Manifest.lock */,
 				AC83402B7DE12A15857FEDB8 /* Compile Kotlin Framework */,
 				FF24A34C20D8D65AA4E3AD93 /* Sources */,
 				26D691D14814FEB0F8CB8807 /* Frameworks */,
 				722135297A378276C97A5F06 /* Resources */,
+				C22A09092ECE47C800C2E733 /* Copy GoogleServices-Info plist */,
+				D2D363472321B6A3F6256E5E /* [CP] Embed Pods Frameworks */,
+				A4B182576A5FC5D80D3E9D63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -84,10 +131,8 @@
 				50AAB60FA3B6284C740C824B /* iosApp */,
 			);
 			name = iosApp;
-			packageProductDependencies = (
-			);
 			productName = iosApp;
-			productReference = F85B4847A51C58651B9A1662 /* FirebaseServicesKMP.app */;
+			productReference = F85B4847A51C58651B9A1662 /* Firebase Portfolio KMP.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,12 +174,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22A090B2ECE513300C2E733 /* Podfile in Resources */,
+				C22A09072ECE464600C2E733 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BBD620BC0C09E3A4DC253E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iosApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B182576A5FC5D80D3E9D63 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AC83402B7DE12A15857FEDB8 /* Compile Kotlin Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -152,7 +238,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode\n";
+			shellScript = "# Script deshabilitado temporalmente - no ejecuta ninguna acción\necho \"iOS PHASE: Compile Kotlin Framework temporarily disabled\"\nexit 0\n\n# CÓDIGO ORIGINAL (PARA MANTENER COMO REFERENCIA):\n# if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n#   echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n#   exit 0\n# fi\n# cd \"$SRCROOT/..\"\n# ./gradlew :composeApp:embedAndSignAppleFrameworkForXcode\n";
+		};
+		C22A09092ECE47C800C2E733 /* Copy GoogleServices-Info plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy GoogleServices-Info plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Copying GoogleService located at ${GOOGLE_SERVICE}\"\n\nif [ -z \"${GOOGLE_SERVICE}\" ]; then\n    echo \"GOOGLE_SERVICE is unset or set to the empty string\"\n    exit 1\nfi\n\nif [ ! -f \"${GOOGLE_SERVICE}\" ]; then\n    echo \"GOOGLE_SERVICE does not exist\"\n    exit 1\nfi\n\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\ncp \"${GOOGLE_SERVICE}\" \"${PLIST_DESTINATION}\"\n\necho \"Copied ${GOOGLE_SERVICE} to ${PLIST_DESTINATION}\"\n";
+		};
+		D2D363472321B6A3F6256E5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -292,6 +413,7 @@
 		};
 		A9D3958BB955DDA260996742 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE383EEAA6D9EAA4D10B19D /* Pods-iosApp.release.xcconfig */;
 			buildSettings = {
 				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -301,6 +423,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = VPEWB3F2N5;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\" \"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal\" \"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\" \"${PODS_ROOT}/../../composeApp/build/cocoapods/framework\" \"$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\"";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -308,6 +431,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +445,7 @@
 		};
 		F68D76BFA96E52BC8F2F79BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 008F61BCC2A3E628484B4297 /* Pods-iosApp.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -330,6 +455,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				DEVELOPMENT_TEAM = VPEWB3F2N5;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited) \"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\" \"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal\" \"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\" \"${PODS_ROOT}/../../composeApp/build/cocoapods/framework\" \"$(SRCROOT)/../composeApp/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)\"";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iosApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,6 +463,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

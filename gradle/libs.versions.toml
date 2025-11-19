@@ -29,6 +29,10 @@ coil = "3.3.0"
 navigation-compose = "2.9.1"
 adaptive = "1.2.0"
 
+# Firebase
+firebase-bom = "34.6.0"
+google-services-plugin = "4.4.4"
+
 # ===========================
 
 [libraries]
@@ -59,8 +63,14 @@ coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" 
 # Navigation
 jetbrains-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 
+# Material3
 material3-adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "adaptive" }
 material3-adaptive-layout = { module = "org.jetbrains.compose.material3.adaptive:adaptive-layout", version.ref = "adaptive" }
+
+# Firebase
+android-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+android-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+
 # ===========================
 
 [plugins]
@@ -78,6 +88,12 @@ compose-hot-reload = { id = "org.jetbrains.compose.hot-reload", version.ref = "c
 
 # Serialization
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+# Firebase
+googleServices = { id = "com.google.gms.google-services", version.ref = "google-services-plugin" }
+
+# Cocoapods for iOS
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 
 [bundles]
 # Dependency Injection
@@ -104,6 +120,5 @@ androidx-lifecycle = [
 
 # UI & Compose
 compose-ui = [
-    "androidx-activity-compose",
     "compose-runtime"
 ]
