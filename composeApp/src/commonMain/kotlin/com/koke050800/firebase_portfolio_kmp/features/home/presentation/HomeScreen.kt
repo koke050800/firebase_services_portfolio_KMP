@@ -26,8 +26,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import firebase_portfolio_kmp.composeapp.generated.resources.Res
-import firebase_portfolio_kmp.composeapp.generated.resources.title_home_screen
+import firebaseportfoliokmp.composeapp.generated.resources.Res
+import firebaseportfoliokmp.composeapp.generated.resources.title_home_screen
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 

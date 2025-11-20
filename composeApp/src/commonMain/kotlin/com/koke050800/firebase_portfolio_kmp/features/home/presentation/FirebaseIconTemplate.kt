@@ -1,7 +1,7 @@
 package com.koke050800.firebase_portfolio_kmp.features.home.presentation
 
-import firebase_portfolio_kmp.composeapp.generated.resources.Res
-import firebase_portfolio_kmp.composeapp.generated.resources.allDrawableResources
+import firebaseportfoliokmp.composeapp.generated.resources.Res
+import firebaseportfoliokmp.composeapp.generated.resources.allDrawableResources
 import org.jetbrains.compose.resources.DrawableResource
 
 data class FirebaseIconTemplate(
