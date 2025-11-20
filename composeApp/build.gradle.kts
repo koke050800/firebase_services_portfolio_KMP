@@ -17,31 +17,22 @@ kotlin {
         }
     }
 
+    iosArm64()
+    iosSimulatorArm64()
+
     cocoapods {
         summary = "Firebase Services Portfolio KMP"
         version = "1.0"
         homepage = "https://github.com/koke050800/firebase_services_portfolio_KMP"
         ios.deploymentTarget = "16.0"
 
-        // Always verify this route
-        podfile = project.file("../iosApp/Podfile")
+        framework {
+            baseName = "ComposeApp"
+            isStatic = true
+        }
 
         pod("FirebaseCore") {
             extraOpts += listOf("-compiler-option", "-fmodules")
-        }
-//        pod("FirebaseAuth") {
-//            version = "~> 11.13"
-//            extraOpts += listOf("-compiler-option", "-fmodules")
-//        }
-
-        listOf(
-            iosArm64(),
-            iosSimulatorArm64()
-        ).forEach { iosTarget ->
-            iosTarget.binaries.framework {
-                baseName = "ComposeApp"
-                isStatic = true
-            }
         }
     }
 

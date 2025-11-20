@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-import composeApp
+import ComposeApp
 
 class AppDelegate: NSObject, UIApplicationDelegate {
 

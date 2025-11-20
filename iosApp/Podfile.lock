@@ -30,7 +30,7 @@ EXTERNAL SOURCES:
     :path: "../composeApp"
 
 SPEC CHECKSUMS:
-  composeApp: a782ae54f5abe4354771548881f5663a7a87c202
+  composeApp: c3e6c24b49730d6384fb4d45d4b809d0a706c022
   FirebaseCore: 0e38ad5d62d980a47a64b8e9301ffa311457be04
   FirebaseCoreInternal: 69bf1306a05b8ac43004f6cc1f804bb7b05b229e
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
