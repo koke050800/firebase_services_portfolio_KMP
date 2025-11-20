@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		46B817F889485222C26FA05F /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CC7CFFCA8E6092CA6C599D /* Pods_iosApp.framework */; };
-		C22A09072ECE464600C2E733 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C22A09052ECE464600C2E733 /* GoogleService-Info.plist */; };
 		C22A090B2ECE513300C2E733 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C22A090A2ECE513300C2E733 /* Podfile */; };
+		C2EBDDDF2ECF84690062BE18 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2EBDDDE2ECF84690062BE18 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3632414F897EA0B4F6D77CED /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
 		527807EE58D75B289E9FE3EA /* Pods-iosApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.debug.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.debug.xcconfig"; sourceTree = "<group>"; };
 		61CC7CFFCA8E6092CA6C599D /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C22A09052ECE464600C2E733 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C22A090A2ECE513300C2E733 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C2EBDDDE2ECF84690062BE18 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F85B4847A51C58651B9A1662 /* Firebase Portfolio KMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase Portfolio KMP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,8 +42,6 @@
 		};
 		E081216BB61BFFAD218804D2 /* Configuration */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = Configuration;
 			sourceTree = "<group>";
 		};
@@ -93,7 +91,7 @@
 		C22A09062ECE464600C2E733 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				C22A09052ECE464600C2E733 /* GoogleService-Info.plist */,
+				C2EBDDDE2ECF84690062BE18 /* GoogleService-Info.plist */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -174,8 +172,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2EBDDDF2ECF84690062BE18 /* GoogleService-Info.plist in Resources */,
 				C22A090B2ECE513300C2E733 /* Podfile in Resources */,
-				C22A09072ECE464600C2E733 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +188,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -266,9 +268,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iosApp/Pods-iosApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
