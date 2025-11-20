@@ -1,4 +1,4 @@
-rootProject.name = "firebase_portfolio_kmp"
+rootProject.name = "FirebasePortfolioKMP"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
