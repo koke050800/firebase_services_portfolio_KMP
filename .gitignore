@@ -18,3 +18,7 @@ captures
 **/xcshareddata/WorkspaceSettings.xcsettings
 node_modules/
 /iosApp/Pods
+
+# Android (google-services.json)
+composeApp/src/debug/google-services.json
+composeApp/src/release/google-services.json
