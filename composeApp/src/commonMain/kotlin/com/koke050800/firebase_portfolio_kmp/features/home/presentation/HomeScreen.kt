@@ -54,7 +54,7 @@ fun HomeScreen() {
         },
     ) { innerPadding ->
         LazyVerticalGrid(
-            columns = GridCells.Adaptive(minSize = 100.dp),
+            columns = GridCells.Adaptive(minSize = 120.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp),
             contentPadding = PaddingValues(8.dp),
