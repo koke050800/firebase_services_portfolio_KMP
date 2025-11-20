@@ -5,10 +5,10 @@ import kotlinx.serialization.Serializable
 sealed interface Route {
 
     @Serializable
-    data object Home: Route
+    data object Home : Route
 
-//    @Serializable
-//    data class MemeEditor(
-//        val templateId: String
-//    ): Route
+    @Serializable
+    data class Auth(
+        val firebaseIconTemplateId: String
+    ) : Route
 }

@@ -27,7 +27,11 @@ class AuthViewModel : ViewModel() {
 
     fun onAction(action: AuthAction) {
         when (action) {
-            else -> TODO("Handle actions")
+            is AuthAction.OnChangePassword -> TODO()
+            AuthAction.OnChangePasswordVisibility -> TODO()
+            AuthAction.OnChangeRememberMeNextTime -> TODO()
+            is AuthAction.OnChangeUserName -> TODO()
+            is AuthAction.OnLogin -> TODO()
         }
     }
 
