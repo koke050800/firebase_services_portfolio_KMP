@@ -7,7 +7,7 @@ object FirebaseHelper {
     @OptIn(ExperimentalForeignApi::class)
     fun doInit() {
         println("KMP Initializer: Starting setup...")
-        FIRApp.Companion.configure()
+        FIRApp.configure()
         println("KMP Initializer: Firebase Configured.")
     }
 }
