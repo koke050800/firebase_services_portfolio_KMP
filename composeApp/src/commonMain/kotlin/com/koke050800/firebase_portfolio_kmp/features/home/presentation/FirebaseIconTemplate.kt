@@ -5,11 +5,23 @@ import firebase_portfolio_kmp.composeapp.generated.resources.allDrawableResource
 import org.jetbrains.compose.resources.DrawableResource
 
 data class FirebaseIconTemplate(
-    val id: String, val drawableResource: DrawableResource
+    val id: String,
+    val drawableResource: DrawableResource,
+    val name: String,
 )
 
 val firebaseIconTemplates = Res.allDrawableResources.filterKeys {
     it.startsWith("firebase_icon_")
-}.map { FirebaseIconTemplate(it.key, it.value) }
-
-
+}.map {
+    val rawName = it.key.substringAfter("firebase_icon_")
+    val name = rawName.split('_').joinToString(" ") { word ->
+        word.replaceFirstChar { char ->
+            if (char.isLowerCase()) char.titlecase() else char.toString()
+        }
+    }
+    FirebaseIconTemplate(
+        id = it.key,
+        drawableResource = it.value,
+        name = name,
+    )
+}
