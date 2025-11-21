@@ -7,16 +7,17 @@ android-targetSdk = "36"
 
 # Language & Runtime
 kotlin = "2.2.21"
-kotlinx-coroutines = "1.10.2"
+# kotlinx-coroutines = "1.10.2"
 kotlinx-serialization = "1.9.0"
 
 # UI Framework & Compose
-compose-multiplatform = "1.9.3"
-compose-jetbrains = "1.9.3"
+compose = "1.9.3"
+compose-compiler = "2.2.21"
 compose-hot-reload = "1.0.0-rc04"
-
-# AndroidX Libraries
 androidx-activity = "1.11.0"
+material3-adaptive = "1.2.0"
+
+# AndroidX
 androidx-lifecycle = "2.9.6"
 
 # Dependency Injection
@@ -26,8 +27,9 @@ koin = "4.1.1"
 coil = "3.3.0"
 
 # Navigation
-navigation-compose = "2.9.1"
-adaptive = "1.2.0"
+nav3-core = "1.0.0"
+nav3-lifecycle-viewmodel = "2.10.0"
+nav3-material3-adaptive = "1.3.0-alpha04"
 
 # Firebase
 firebase-bom = "34.6.0"
@@ -38,12 +40,18 @@ google-services-plugin = "4.4.4"
 [libraries]
 # Language & Runtime
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+# kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
-# UI Framework & Compose
+# UI & Compose
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-jetbrains" }
-compose-ui-backhandler = { module = "org.jetbrains.compose.ui:ui-backhandler", version.ref = "compose-jetbrains" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose" } # Añadida para completitud
+compose-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "compose" } # Añadida para completitud
+
+# Material 3 Adaptive
+material3-adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "material3-adaptive" }
+material3-adaptive-layout = { module = "org.jetbrains.compose.material3.adaptive:adaptive-layout", version.ref = "material3-adaptive" }
 
 # AndroidX Lifecycle
 androidx-lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
@@ -51,25 +59,24 @@ androidx-lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecy
 androidx-lifecycle-runtime-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-viewmodel-savedstate = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
 
-# Dependency Injection
+# Navigation 3
+navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "nav3-core" }
+navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "nav3-core" }
+navigation3-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "nav3-lifecycle-viewmodel" }
+navigation3-material3-adaptive = { group = "androidx.compose.material3.adaptive", name = "adaptive-navigation3", version.ref = "nav3-material3-adaptive" }
+
+# Dependency Injection (Koin)
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
 koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
 
-# Image Loading
+# Image Loading (Coil)
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 
-# Navigation
-jetbrains-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
-
-# Material3
-material3-adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "adaptive" }
-material3-adaptive-layout = { module = "org.jetbrains.compose.material3.adaptive:adaptive-layout", version.ref = "adaptive" }
-
 # Firebase
-android-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
-android-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" } # Alias simplificado
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 
 # ===========================
 
@@ -78,38 +85,22 @@ android-firebase-analytics = { module = "com.google.firebase:firebase-analytics"
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 
-# Language & Runtime
+# Kotlin & Compose
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-
-# UI Framework & Compose
-compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "compose-compiler" }
 compose-hot-reload = { id = "org.jetbrains.compose.hot-reload", version.ref = "compose-hot-reload" }
 
 # Serialization
 serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
 # Firebase
-googleServices = { id = "com.google.gms.google-services", version.ref = "google-services-plugin" }
+google-services = { id = "com.google.gms.google-services", version.ref = "google-services-plugin" }
 
-# Cocoapods for iOS
-kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
+# iOS - Cocoapods
+kotlin-cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 
 [bundles]
-# Dependency Injection
-koin-common = [
-    "koin-core",
-    "koin-compose",
-    "koin-compose-viewmodel"
-]
-
-koin-android = [
-    "koin-core",
-    "koin-android",
-    "koin-compose",
-    "koin-compose-viewmodel"
-]
-
 # AndroidX Lifecycle
 androidx-lifecycle = [
     "androidx-lifecycle-viewmodel",
@@ -118,7 +109,13 @@ androidx-lifecycle = [
     "androidx-lifecycle-viewmodel-savedstate"
 ]
 
-# UI & Compose
-compose-ui = [
-    "compose-runtime"
+# Dependency Injection (Koin)
+koin-common = [
+    "koin-core",
+    "koin-compose",
+    "koin-compose-viewmodel"
+]
+
+koin-android = [
+    "koin-android"
 ]

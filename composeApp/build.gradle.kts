@@ -6,8 +6,8 @@ plugins {
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.serialization)
-    alias(libs.plugins.googleServices)
-    alias(libs.plugins.kotlinCocoapods)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.kotlin.cocoapods)
 }
 
 kotlin {
@@ -38,19 +38,28 @@ kotlin {
 
     sourceSets {
         androidMain.dependencies {
+
+            // Compose Previews
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
 
-
-            // DI with Koin
+            // Dependency Injection (Koin for Android)
             implementation(libs.bundles.koin.android)
 
             // Firebase Services
-            implementation(project.dependencies.platform(libs.android.firebase.bom))
-            implementation(libs.android.firebase.analytics)
+            implementation(project.dependencies.platform(libs.firebase.bom))
+            implementation(libs.firebase.analytics)
+
+
+            // Navigation 3 - Core and UI components for android
+            implementation(libs.navigation3.ui)
+            implementation(libs.navigation3.lifecycle.viewmodel)
+            implementation(libs.navigation3.material3.adaptive)
 
         }
+
         commonMain.dependencies {
+            // Compose Multiplatform
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
@@ -59,17 +68,24 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
 
+            // Material 3 Adaptive
             implementation(libs.material3.adaptive)
             implementation(libs.material3.adaptive.layout)
-            implementation(libs.compose.ui.backhandler)
+
+            // Navigation 3 (common part)
+            implementation(libs.navigation3.runtime)
+
+            // AndroidX Lifecycle (common part)
+            implementation(libs.bundles.androidx.lifecycle)
+
+            // Dependency Injection (Koin common)
+            implementation(libs.bundles.koin.common)
+
+            // Utils
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.coil.compose)
-            implementation(libs.jetbrains.compose.navigation)
-
-            implementation(libs.bundles.compose.ui)
-            implementation(libs.bundles.koin.common)
-            implementation(libs.bundles.androidx.lifecycle)
         }
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
