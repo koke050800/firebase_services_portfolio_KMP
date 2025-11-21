@@ -20,29 +20,55 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.koke050800.firebase_portfolio_kmp.core.router.Route
+import com.koke050800.firebase_portfolio_kmp.core.theme.FirebasePortfolioKMPTheme
+import com.koke050800.firebase_portfolio_kmp.features.home.data.firebaseIconList
 import firebaseportfoliokmp.composeapp.generated.resources.Res
 import firebaseportfoliokmp.composeapp.generated.resources.title_home_screen
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
+import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.compose.viewmodel.koinViewModel
 
-/**
- * A Composable function that represents the main screen of the application.
- *
- * This screen displays a grid of cards, each representing a Firebase feature or service.
- * It uses a [Scaffold] to provide a standard layout with a [TopAppBar].
- * The main content is a [LazyVerticalGrid] that adaptively arranges the cards
- * based on the available screen width. Each card contains an icon and the name of the
- * Firebase feature, and is clickable.
- */
+@Composable
+fun HomeRoot(
+    viewModel: HomeViewModel = koinViewModel(),
+    onNavigate: (Route) -> Unit,
+) {
+
+    val state by viewModel.state.collectAsStateWithLifecycle()
+
+    LaunchedEffect(Unit) {
+        viewModel.effect.collect { effect ->
+            when (effect) {
+                is HomeEffect.Navigate -> onNavigate(effect.route)
+            }
+        }
+    }
+
+    HomeScreen(
+        state = state,
+        onAction = viewModel::onAction
+    )
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    state: HomeState,
+    onAction: (HomeAction) -> Unit,
+) {
+
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -61,20 +87,21 @@ fun HomeScreen() {
             modifier = Modifier.padding(innerPadding),
         ) {
             items(
-                items = firebaseIconTemplates, key = { it.id }) { firebaseIconTemplate ->
+                items = state.templates, key = { it.id }) { firebaseIconData ->
                 Card(
                     modifier = Modifier.aspectRatio(0.9f),
                     colors = CardDefaults.cardColors(
                         containerColor = MaterialTheme.colorScheme.tertiaryContainer,
                     ),
                     onClick = {
-                        println("Clicked on ${firebaseIconTemplate.id}")
+                        val route = firebaseIconRoutes[firebaseIconData.id] ?: Route.Home
+                        onAction(HomeAction.OnCardClick(route))
                     },
                     elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
                 ) {
                     Box(
                         contentAlignment = Alignment.Center,
-                        modifier = Modifier.fillMaxSize() // Asegura que el Box llene la Card
+                        modifier = Modifier.fillMaxSize()
                     ) {
                         Column(
                             modifier = Modifier.fillMaxWidth(),
@@ -82,13 +109,13 @@ fun HomeScreen() {
                         ) {
 
                             Image(
-                                painter = painterResource(firebaseIconTemplate.drawableResource),
+                                painter = painterResource(firebaseIconData.drawableResource),
                                 contentDescription = null,
                                 modifier = Modifier.fillMaxWidth(0.65f)
                             )
 
                             Text(
-                                text = firebaseIconTemplate.name,
+                                text = firebaseIconNames[firebaseIconData.id] ?: "Unknown Name",
                                 style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
                                 modifier = Modifier.padding(horizontal = 4.dp)
                                     .padding(bottom = 8.dp),
@@ -101,5 +128,16 @@ fun HomeScreen() {
                 }
             }
         }
+    }
+}
+
+@Preview
+@Composable
+private fun Preview() {
+    FirebasePortfolioKMPTheme {
+        HomeScreen(
+            state = HomeState(templates = firebaseIconList),
+            onAction = {}
+        )
     }
 }

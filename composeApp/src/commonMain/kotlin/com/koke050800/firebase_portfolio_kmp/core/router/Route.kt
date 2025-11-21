@@ -8,7 +8,18 @@ sealed interface Route {
     data object Home : Route
 
     @Serializable
-    data class Auth(
-        val firebaseIconTemplateId: String
-    ) : Route
+    data object AppCheck : Route
+
+    @Serializable
+    data object Auth : Route
+
+    @Serializable
+    data object CloudMessaging : Route
+
+    @Serializable
+    data object Database : Route
+
+    @Serializable
+    data object Storage : Route
+
 }
