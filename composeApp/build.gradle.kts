@@ -50,12 +50,6 @@ kotlin {
             implementation(project.dependencies.platform(libs.firebase.bom))
             implementation(libs.firebase.analytics)
 
-
-            // Navigation 3 - Core and UI components for android
-            implementation(libs.navigation3.ui)
-            implementation(libs.navigation3.lifecycle.viewmodel)
-            implementation(libs.navigation3.material3.adaptive)
-
         }
 
         commonMain.dependencies {
@@ -72,8 +66,8 @@ kotlin {
             implementation(libs.material3.adaptive)
             implementation(libs.material3.adaptive.layout)
 
-            // Navigation 3 (common part)
-            implementation(libs.navigation3.runtime)
+            // Navigation Compose
+            implementation(libs.jetbrains.compose.navigation)
 
             // AndroidX Lifecycle (common part)
             implementation(libs.bundles.androidx.lifecycle)
